@@ -11,3 +11,4 @@ book2 =int(input("enter the second number "))
 totalbill = price(book1,book2)
 print(totalbill)
 
+

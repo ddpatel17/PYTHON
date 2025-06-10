@@ -14,3 +14,4 @@ print("result is = ",result)
 print("result is =",nsquare(2,3))
 print("result is =",nsquare(1))  #nsquare() missing 1 required positional argument: 'x'
 print("result is =",nsquare(y=2,x=3))
+
