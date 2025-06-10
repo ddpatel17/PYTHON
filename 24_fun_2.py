@@ -1,10 +1,10 @@
-# keywords arguments
+# keywords arguments function
 def items(cashew,almond,dates):# with perameater without return
     print('items in : cashew -',cashew,'almond -',almond,'dates -',dates)
 items(3000,3000,1500)
 items(cashew=3000,dates=1500,almond=3500,)
 
-# default arguments 
+# default arguments function
 
 # if we write x=y=10 than both get same value
 def nsquare(x, y = 2): #here x is required and y is optional

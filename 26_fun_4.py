@@ -1,3 +1,6 @@
+                    #arbitray arguments functions 
+
+
 def dp(name,*marks):
     # for mark in marks:
     #     print(marks)

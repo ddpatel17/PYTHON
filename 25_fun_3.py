@@ -1,3 +1,6 @@
+
+                # return multiple value from function 
+
 def price(book1,book2):
     add = book1+book2
     sub = book1-book2

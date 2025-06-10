@@ -1,4 +1,4 @@
-            # types of function
+            # 4 types of function
 
 #default function
 d ="diya patel"
