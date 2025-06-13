@@ -1,4 +1,4 @@
-import math
+import math as m
 x =float(input("enter the number "))
 
 print("modf is =", math.modf(x)) # modf(x)Returns the fractional and integer parts of x
@@ -11,5 +11,3 @@ print("log2 is =", math.log2(x))# log2(x)Returns the base-2 logarithm of x
 print("log10 is =", math.log10(x))# log10(x)Returns the base-10 logarithm of x
 print("pow is =", math.pow(x,2))# pow(x, y)Returns x raised to the power y
 print("sqrt is =", math.sqrt(x))# sqrt(x)Returns the square root of x
-print("acos is =", math.acos(x))# acos(x)Returns the arc cosine of x
-print("asin is =", math.asin(x))# asin(x)Returns the arc sine of x
