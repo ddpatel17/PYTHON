@@ -1,15 +1,16 @@
 import random as r
-def generate_otp():
-    if otp == 8:
-        print((r.radiant(10,90)),(r.radiant(10,90)),(r.radiant(10,90)),(r.radiant(10,90)))
-    else otp == 6:
-         print((r.radiant(10,90)),(r.radiant(10,90)),(r.radiant(10,90)))
-    else otp == 4:
-         print((r.radiant(10,90)),(r.radiant(10,90)))     
-    else otp == 2:
-         print((r.radiant(10,90)))
-    elif 0:
+def generate_otp(size =6):
+    if size == 8:
+        return str(r.radiant(10,90)) + str(r.radiant(10,90)) + str(r.radiant(10,90)) + str(r.radiant(10,90))
+    else size == 6:
+         return str(r.radiant(10,90)) + str(r.radiant(10,90)) + str(r.radiant(10,90))
+    else size == 4:
+         return str(r.radiant(10,90)) + str(r.radiant(10,90))     
+    else size == 2:
+         return str(r.radiant(10,90))
+    elif:
+          return 0
         
-n = int(input("enter the number of otp "))  
-output=(generate_otp)
-print(n)      
+n = int(input("enter the size of otp "))  
+d =(generate_otp)
+print(d)      
