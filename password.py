@@ -3,28 +3,31 @@ Alphabets=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
 digit=['0','1','2','3','4','5','6','7','8','9']
 Special=['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
 
-new = "--"
-print(str.join(Alphabets + digit + Special))
+s = ","
+print(s.join(Alphabets + digit + Special))
 
 
-import random
-import string
+import random as r
 
-def generate_password():
-    for i in range(length):
+
+def getpassword(length =8):
+    lower = string.lowercase
+    upper = string.uppercase
+    digit = string.digit
+    special = string.special
+
+    # for i in range()
         
         if length == 12:
-            print(r.shuffle(str.lower(),str.lower(),str.lower(),str.upper(),str.upper(),str.upper(),str.special(),str.special(),str.digit(),str.digit(),str.digit(),str.digit()))
-        else length == 8:
-            print(r.shuffle(str.lower(),str.lower(),str.upper(),str.upper(),str.Special(),str.digit(),str.digit(),str.digit()))    
-        else length == 4:
-            print(r.shuffle(str.special(),str.lower(),str.upper(),str.digit()))
-        elif 0:
+            return str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(special)) + str(r.shuffle(special)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit))
+
+        elif length == 8:
+            return str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(special)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit))
+        elif length == 4:
+            return str(r.shuffle(special)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(digit)) 
+        else:
+            return "invalid length"
 
 n = int(input("enter the number of password "))  
-output=(generate_password)
-print(n)     
-          
-
-
-
+# d =(getpassword)
+print(getpassword(n))     
