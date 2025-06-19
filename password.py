@@ -16,15 +16,15 @@ def getpassword(size =8):
     # for i in range(size =8):
         
         if size == 12:
-            return str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(special[s])) + str(r.shuffle(special[s])) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit[s]))
+            return str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(ascii)) + str(r.choice(ascii_up)) + str(r.choice(spece)) + str(r.choice(spece)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit))
 
         elif size == 8:
-            return str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(special[s])) + str(r.shuffle(digit[s])) + str(r.shuffle(digit[s])) + str(r.shuffle(digit[s]))
+            return str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(ascii_upper)) + str(r.choice(special)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit))
         elif size == 4:
-            return str(r.shuffle(special[s])) + str(r.shuffle(ascii_lower[s])) + str(r.shuffle(ascii_upper[s])) + str(r.shuffle(digit[s])) 
+            return str(r.choice(special)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(digit)) 
         else:
             return "invalid size"
 
 n = int(input("enter the size of password "))  
 p =(getpassword)
-print(getpassword(p))     
+print(p)  
