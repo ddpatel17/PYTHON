@@ -8,6 +8,7 @@ print(s.join(Alphabets + digit + Special))
 
 
 import random as r
+import string as str
 
 
 def getpassword(size =8):
@@ -16,15 +17,19 @@ def getpassword(size =8):
     # for i in range(size =8):
         
         if size == 12:
-            return str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(ascii)) + str(r.choice(ascii_up)) + str(r.choice(spece)) + str(r.choice(spece)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit))
+            return str(r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(special) + r.choice(special) + r.choice(digit) + r.choice(digit) + r.choice(digit) + r.choice(digit))
 
         elif size == 8:
-            return str(r.choice(ascii_lower)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(ascii_upper)) + str(r.choice(special)) + str(r.choice(digit)) + str(r.choice(digit)) + str(r.choice(digit))
+              return str(r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(special) + r.choice(digit) + r.choice(digit) + r.choice(digit))
         elif size == 4:
-            return str(r.choice(special)) + str(r.choice(ascii_lower)) + str(r.choice(ascii_upper)) + str(r.choice(digit)) 
+              return  str(r.choice(special) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(digit))
         else:
-            return "invalid size"
+            return 0
+
+
 
 n = int(input("enter the size of password "))  
-p =(getpassword)
-print(p)  
+ans =(getpassword)
+print(ans)  
+# print(getpassword(n))
+   
