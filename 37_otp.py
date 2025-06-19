@@ -1,5 +1,6 @@
-import otp
-n = int(input("enter the size of otp "))  
-d =(generate_otp)
-print(d)      
-# print(otp.generate_otp(n))
+# import otp
+
+# n = int(input("enter the size of otp "))  
+# d =(getotp)
+# print(d)  
+# print(otp.getotp(n)) 
