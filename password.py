@@ -10,24 +10,21 @@ print(s.join(Alphabets + digit + Special))
 import random as r
 
 
-def getpassword(length =8):
-    lower = string.lowercase
-    upper = string.uppercase
-    digit = string.digit
-    special = string.special
+def getpassword(size =8):
 
-    # for i in range()
+
+    # for i in range(size =8):
         
-        if length == 12:
+        if size == 12:
             return str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(special)) + str(r.shuffle(special)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit))
 
-        elif length == 8:
+        elif size == 8:
             return str(r.shuffle(lower)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(upper)) + str(r.shuffle(special)) + str(r.shuffle(digit)) + str(r.shuffle(digit)) + str(r.shuffle(digit))
-        elif length == 4:
+        elif size == 4:
             return str(r.shuffle(special)) + str(r.shuffle(lower)) + str(r.shuffle(upper)) + str(r.shuffle(digit)) 
         else:
-            return "invalid length"
+            return "invalid size"
 
-n = int(input("enter the number of password "))  
-# d =(getpassword)
-print(getpassword(n))     
+n = int(input("enter the size of password "))  
+d =(getpassword)
+print(getpassword(d))     
