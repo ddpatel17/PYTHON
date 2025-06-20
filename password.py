@@ -32,17 +32,27 @@ def generate_password(length):
             for i in range(length - 4):
                 password += [r.choice(s.ascii_uppercase + s.ascii_lowercase + s.digits + s.punctuation)]
             r.shuffle(password)
-            return ''.join(password)
+            # return ''.join(password)
+            n = int(input("enter a length of password: "))
+            ans = (generate_password)
+            print(ans)
+            print(generate_password(n))
+            # if ans:
+            #     print("Generated password:", ans)
+            # len = int(input("enter a length of password: "))
+            # password = p.generate_password(len)
+
+            print("\n password is",generate_password)
+            print("\n lenght of password is",len(password))
+            save_password(generate_password)
 
 
-n = int(input("enter a length of password: "))
-ans = (generate_password)
-print(ans)
-print(generate_password(n))
-# if ans:
-#     print("Generated password:", ans)
 
 
-# len = int(input("enter a length of password: "))
-# password = p.generate_password(len)
+
+
+def save_password(password):
+    file_name = "generate_password.txt"
+    with open(file_name,'a') as file:
+        file.write(password + '\n' )
    
