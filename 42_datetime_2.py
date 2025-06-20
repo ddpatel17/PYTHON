@@ -8,12 +8,13 @@ birth_date = date(2004,5,14)
 print(birth_date)
 
 
-# timestamp
+# timestamp 
+      # How to get current time stamp
 import datetime as dt
 ts = dt.now().timestamp()
 print("timestamp: ", ts) # float
 print("timestamp :", int(ts)) #int
-      # or
+      # How to Get date from a timestamp?
 from datetime import date
 ts = date.fromtimestamp(1750393592)
 print("date =", ts)
