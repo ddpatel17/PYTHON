@@ -8,28 +8,41 @@ print(s.join(Alphabets + digit + Special))
 
 
 import random as r
-import string as str
+import string as s
 
 
-def getpassword(size =8):
+def generate_password(length):
 
+        if length < 4:
+            print("password length must be at least 4.")
 
-    # for i in range(size =8):
-        
-        if size == 12:
-            return str(r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(special) + r.choice(special) + r.choice(digit) + r.choice(digit) + r.choice(digit) + r.choice(digit))
-
-        elif size == 8:
-              return str(r.choice(ascii_lowercase) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(ascii_uppercase) + r.choice(special) + r.choice(digit) + r.choice(digit) + r.choice(digit))
-        elif size == 4:
-              return  str(r.choice(special) + r.choice(ascii_lowercase) + r.choice(ascii_uppercase) + r.choice(digit))
+        elif length > 20:
+              print("password length must be at most 20.")
+    
         else:
-            return 0
+            password = [
+                r.choice(s.ascii_lowercase),
+                r.choice(s.ascii_uppercase),
+                r.choice(s.digits),
+                r.choice(s.punctuation)
+            ]
+            
+            r.shuffle(password)
+            
+            for i in range(length - 4):
+                password += [r.choice(s.ascii_uppercase + s.ascii_lowercase + s.digits + s.punctuation)]
+            r.shuffle(password)
+            return ''.join(password)
 
 
+n = int(input("enter a length of password: "))
+ans = (generate_password)
+print(ans)
+print(generate_password(n))
+# if ans:
+#     print("Generated password:", ans)
 
-n = int(input("enter the size of password "))  
-ans =(getpassword)
-print(ans)  
-# print(getpassword(n))
+
+# len = int(input("enter a length of password: "))
+# password = p.generate_password(len)
    
