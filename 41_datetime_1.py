@@ -8,6 +8,6 @@ current_date = dt.date.today()
 print(current_date)  
 
 # get today yera,month,day with date object 
-print("current yera: ",currentdate.year)
-print("current month: ",currentdate.month)
-print("current day: ",currentdate.day)
+print("current year: ",current_date.year)
+print("current month: ",current_date.month)
+print("current day: ",current_date.day)
