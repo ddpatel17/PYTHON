@@ -15,9 +15,13 @@ ts = datetime.now().timestamp()
 print("timestamp: ", ts) # float
 print("timestamp :", int(ts)) #int
       # How to Get date from a timestamp?
-from datetime import date
-ts = date.fromtimestamp(1750393592)
+import datetime as dt
+ts = dt.date.fromtimestamp(1750393592)
 print("date =", ts)
+     # or 
+from datetime import date 
+ts = date.fromtimestamp(1750393592)
+print("date =", ts)  
   
 
   
