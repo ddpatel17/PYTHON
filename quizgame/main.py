@@ -31,3 +31,4 @@ for question_num in range(len(question_bank)):
 
 print(f"your have given {score} currect answers")
 print(f"your score is {(score/len(question_bank))+100} %")
+
