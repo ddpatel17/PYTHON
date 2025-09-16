@@ -42,4 +42,5 @@ def save_password(password):
     file_name = "generate_password.txt"
     with open(file_name,'a') as file:
         file.write(password + '\n' )
+        
    
