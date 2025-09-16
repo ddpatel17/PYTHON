@@ -1,0 +1,136 @@
+data base
+data store
+
+table - row,col
+row - record 
+col - field,artibutes
+
+table structure - scyma
+db - table1,table2,...
+
+mysql,oracle
+
+wamp,mysql(phpmyadmin)
+
+sql(structured query language)
+* = MEANS ALL 
+
+1) create a table 
+    CREATE TABLE tablename( id int auto_increment primary key, name varchar(50),salary int)
+ex: CREATE TABLE student(Id,Name,Roll no,math,eng,science,per)
+
+2) drop table 
+    DROP TABLE tablename 
+ex: DROP TABLE employees
+   
+3) rename table 
+    RENAME TABLE oldname TO newname
+    ALTER TABLE oldnametable RENAME TO newnametable;
+EX: 1. RENAME TABLE STUDENTS TO LEARNERS  # ERROR
+    2. ALTER TABLE STUDENTS RENAME TO LEARNERS;
+    
+
+
+
+insert
+-----------------------------------------------------
+1) INSERT INTO tablename VALUES(....)
+INSERT INTO LEARNERS VALUES(1,"DIYA",1,80,70,90,80)
+
+2) INSERT INTO tablename(fields) values(......)
+INSERT INTO LEARNERS(Id,Name,Roll,MATH,SCI,ENG,PER) VALUES(1,"SHITAL",2,80,60,50,63.33)
+
+
+update
+-----------------------------------------------------
+1) update table set field = new value,....  where condition
+ex: UPDATE LEARNERS SET MATH=60,SCI=80,ENG=90,PER=76.66 where Name="DHARM" and Roll=1 
+    UPDATE LEARNERS SET id=3,roll=3 where PER=63.33
+    UPDATE LEARNERS SET PER="PASS" WHERE PER>=72
+    UPDATE LEARNERS SET PER="FAIL" WHERE PER<72
+    update learners set Name="SHITAL" WHERE PER="FAIL"
+
+
+delete
+------------------------------------------------------
+    1) DELETE FROM tablename WHERE condition
+EX: DELETE FROM LEARNERS WHERE ENG<=0
+delete from payments where paymentdate>='2005-01-01' and paymentdate<='2005-12-31'
+delete from payments where paymentdate between('2005-01-01' and '2005-12-31')
+
+
+
+agreegate function (return a single value)
+-------------------------------------------------------
+    sum   : SELECT SUM(field) "TOTAL" FROM TABLENAME
+    min   : SELECT MIN(field) "min" FROM TABLENAME  
+    max   : SELECT max(field) "min" FROM TABLENAME  
+    count : SELECT COUNT(*) FROM TABLENAME           # NUMBER OF RAW COUNT 
+    avg   : SELECT avg(field) FROM TABLENAME 
+
+EX: SELECT COUNT(*) "TOTAL" FROM LEARNERS
+    SELECT SUM(MATH) "TOTAL" FROM LEARNERS
+
+
+
+select
+-------------------------------------------------------
+    1) select field | * from table_name where condition (group by) (having) condition (order by ) (limit start,row) 
+ex: select * FROM LEARNERS WHERE PER="PASS"
+    select Name,Roll FROM LEARNERS WHERE MATH>=50
+
+
+
+
+order by 
+---------------------------------------------------------
+    1) assending
+        SELECT field FROM tablename ORDER BY field
+ex : SELECT age FROM Customers ORDER BY age        # only age print in assending order
+     SELECT * FROM Customers ORDER BY age          # all table print in assending order
+
+    2) dessending
+        SELECT field FROM tablename ORDER BY field DESC
+EX:  SELECT age FROM Customers ORDER BY age DESC
+     SELECT * FROM Customers ORDER BY age DESC
+
+    3) find maximum amout from payments table
+        SELECT * FROM tablename ORDER BY field DESC LIMIT 0,3
+        SELECT field FROM tablename ORDER BY field
+EX:  SELECT * FROM Customers ORDER BY age LIMIT 0,3
+     SELECT * FROM Customers ORDER BY age DESC LIMIT 1,3
+
+
+
+group by 
+-------------------------------------------------------------
+    1) SELECT field,COUNT(*) FROM tablename GROUP BY field
+EX: SELECT *,SUM(MATH+SCI+ENG) FROM LEARNERS group by MATH 
+    SELECT customerNumber,COUNT(*) FROM payments GROUP BY customerNumber HAVING COUNT(*)>2
+
+
+===================================================================================================================================================================
+
+
+===================================================================================================================================================================
+
+PROJECT :
+========
+
+product management
+1) seller(admin) view
+-add product
+-remove product
+-update product details
+-fetch product
+
+-view customer
+
+2) customer view
+-view product
+-buy product
+-payment
+-bill
+
+
+table - products,customers,payments

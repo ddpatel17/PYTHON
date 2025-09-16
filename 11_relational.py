@@ -1,0 +1,13 @@
+num1=input("enter your number1 ")
+num2=input("enter your number2 ")
+num1=int(num1)
+num2=int(num2)
+print(num1);print(num2)
+
+print("equal to is = ",num1 == num2)
+print("not equal to is = ",num1 != num2)
+print("less then is = ",num1 < num2)
+print("less then equal to is = ",num1 <= num2)
+print("grater then is = ",num1%num2)
+print("grater then equal to is = ",num1 > num2)
+print("floor div is = ",num1 >= num2)
